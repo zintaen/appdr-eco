@@ -1,0 +1,71 @@
+.hiw-container {
+  .title {
+    text-align: center;
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 95px;
+    font-weight: 700;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 5px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    padding: 0 215px;
+
+    .block {
+      margin: 0 auto;
+
+      .border {
+        position: relative;
+        font-size: 30px;
+        display: inline-block;
+
+        &.line {
+          &::before {
+            height: 1px;
+            width: 190px;
+            background-color: #e2e2e2;
+            content: "";
+            position: absolute;
+            right: 128px;
+            top: 45px;
+          }
+          &::after {
+            height: 1px;
+            width: 190px;
+            background-color: #e2e2e2;
+            content: "";
+            position: absolute;
+            left: 128px;
+            top: 45px;
+          }
+        }
+
+        .number {
+          display: table-cell;
+          vertical-align: middle;
+          height: 90px;
+          width: 90px;
+          border: 2px solid #ff214f;
+          border-radius: 50%;
+
+          &:hover {
+            color: white;
+            background-color: #ff214f;
+          }
+        }
+      }
+      .bold {
+        font-weight: 600;
+        margin-top: 26px;
+      }
+      .small {
+        font-size: 12px;
+        font-family: sans-serif;
+        margin-top: 14px;
+      }
+    }
+  }
+}

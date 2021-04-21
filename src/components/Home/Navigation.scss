@@ -1,0 +1,51 @@
+$color-navigation: white;
+
+.ant-menu {
+  margin-right: -50px;
+  margin-left: -50px;
+  height: 60px;
+
+  &.navigation {
+    display: flex;
+    justify-content: space-between;
+    border-right: none;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    &.black {
+      background-color: transparent;
+
+      .link {
+        color: $color-navigation;
+      }
+    }
+
+    &.white {
+      background-color: $color-navigation;
+      box-shadow: 0 5px 10px -10px black;
+
+      .link {
+        color: black;
+      }
+    }
+
+    .logo {
+      margin-top: 15px;
+      height: 30px;
+    }
+
+    .link-container {
+      .link {
+        font-family: revert;
+        font-size: 10px;
+        font-weight: 500;
+      }
+      .about {
+        margin-left: 30px;
+      }
+    }
+  }
+}
