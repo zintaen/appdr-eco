@@ -34,6 +34,17 @@ function Price() {
             <div className="large">$100</div>
             <div className="small">PER APP</div>
           </div>
+          <div className="bottom">
+            <div className="under">Base WebApp features</div>
+            <div className="under">Customize Launcher icon</div>
+            <div className="under">
+              Build App with customer's <br /> developer account
+            </div>
+            <div className="under">Special Offer by 2019</div>
+            <Button color="black" className="button">
+              CONTACT US
+            </Button>
+          </div>
         </div>
         <div className="border">
           <div className="top">
@@ -43,6 +54,19 @@ function Price() {
             <div className="bold">CUSTOMIZE & BUILD</div>
             <div className="large">> $100</div>
             <div className="small">PER APP</div>
+          </div>
+          <div className="bottom">
+            <div className="under">Base WebApp features</div>
+            <div className="under">Customize Launcher icon</div>
+            <div className="under">
+              Customize WebApp by <br /> requirements
+            </div>
+            <div className="under">
+              Build App with customer's <br /> developer account
+            </div>
+            <Button color="black" className="button">
+              CONTACT US
+            </Button>
           </div>
         </div>
       </div>
