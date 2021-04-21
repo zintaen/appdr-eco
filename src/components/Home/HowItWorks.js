@@ -2,7 +2,7 @@ import "./HowItWorks.scss";
 
 function HowItWorks() {
   return (
-    <div className="hiw-container" id="howitworks">
+    <section className="hiw-container" id="how-it-works">
       <div className="title">HOW IT WORKS</div>
       <div className="content">
         <div className="block">
@@ -34,7 +34,7 @@ function HowItWorks() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 export default HowItWorks;

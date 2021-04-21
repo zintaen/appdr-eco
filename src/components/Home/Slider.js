@@ -6,8 +6,8 @@ import "./Slider.scss";
 
 function Slider() {
   return (
-    <div id="home">
-      <Carousel autoplay>
+    <section id="home">
+      <Carousel draggable="true" autoplay>
         <div className="slider slider-1">
           <div className="content">
             <div className="top">If your have a website</div>
@@ -54,7 +54,7 @@ function Slider() {
           </div>
         </div>
       </Carousel>
-    </div>
+    </section>
   );
 }
 export default Slider;

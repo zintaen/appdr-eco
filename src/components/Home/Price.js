@@ -3,7 +3,7 @@ import "./Price.scss";
 
 function Price() {
   return (
-    <div className="price-container">
+    <section className="price-container" id="price">
       <div className="title">PRICE</div>
       <div className="content">
         <div className="border">
@@ -70,7 +70,7 @@ function Price() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 export default Price;

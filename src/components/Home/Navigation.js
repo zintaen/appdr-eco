@@ -16,13 +16,13 @@ function Navigation({ color }) {
         <a href="#about" className="link about">
           ABOUT
         </a>
-        <a href="#howitworks" className="link about">
+        <a href="#how-it-works" className="link about">
           HOW IT WORKS
         </a>
-        <a href="#" className="link about">
+        <a href="#price" className="link about">
           PRICE
         </a>
-        <a href="#" className="link about">
+        <a href="#contact-us" className="link about">
           CONTACT US
         </a>
         <a href="#" className="link about">

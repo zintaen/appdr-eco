@@ -1,6 +1,16 @@
-.partners-and-clients {
+.partners-and-clients-conatainer {
+  background-color: #f7f7f7;
+  padding: 130px 150px;
+
+  .title {
+    text-align: center;
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 95px;
+    font-weight: 700;
+  }
+
   .logo {
-    // background-image: url(../../assets/images/client_logos/logo_1.jpg);
     height: 150px;
     width: 240px;
   }

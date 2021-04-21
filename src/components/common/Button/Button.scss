@@ -36,34 +36,4 @@
       background-color: transparent;
     }
   }
-
-  &.gray {
-    color: white;
-    background-color: #fff;
-    border: 2px solid white;
-
-    padding: 2px 24px;
-
-    &:hover {
-      color: #fff;
-      background-color: transparent;
-    }
-  }
-
-  &.round {
-    border-radius: 50px;
-  }
-
-  &.pink {
-    color: white;
-    background-color: #ff214f;
-    border: 2px solid #ff214f;
-    border-radius: 50px;
-    padding: 2px 30px 4px 30px;
-
-    &:hover {
-      background-color: transparent;
-      color: #ff214f;
-    }
-  }
 }

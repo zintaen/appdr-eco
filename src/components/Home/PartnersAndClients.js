@@ -4,7 +4,8 @@ import "./PartnersAndClients.scss";
 
 function PartnersAndClients() {
   return (
-    <div className="partners-and-clients">
+    <section className="partners-and-clients-conatainer">
+      <div className="title">PARTNERS AND CLIENTS</div>
       <Carousel draggable="true" slidesToShow="5" autoplay>
         {Array.from(Array(64).keys()).map((item) => {
           return (
@@ -18,7 +19,7 @@ function PartnersAndClients() {
           );
         })}
       </Carousel>
-    </div>
+    </section>
   );
 }
 export default PartnersAndClients;

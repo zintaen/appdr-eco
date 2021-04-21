@@ -1,0 +1,15 @@
+.contact-us-container {
+  background-image: url(../../assets/images/contact_background.jpg);
+  min-height: 730px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .line {
+    border-color: #e2e2e2;
+    padding-top: 40px;
+    border-left: none;
+    border-right: none;
+  }
+}

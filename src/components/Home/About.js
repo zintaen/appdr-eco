@@ -3,7 +3,7 @@ import "./About.scss";
 
 function About() {
   return (
-    <div className="about-container" id="about">
+    <section className="about-container" id="about">
       <div className="left"></div>
       <div className="middle">
         <div className="title">JUST PROVE YOUR IDEA</div>
@@ -21,7 +21,7 @@ function About() {
         </Button>
       </div>
       <div className="right"></div>
-    </div>
+    </section>
   );
 }
 export default About;
