@@ -1,7 +1,11 @@
 import "./ButtonRound.scss";
 
-function ButtonRound({ children, color }) {
-  return <button className={`button ${color}`}>{children}</button>;
+function ButtonRound({ children, color, onClick }) {
+  return (
+    <button onClick={onClick} className={`button-round ${color}`}>
+      {children}
+    </button>
+  );
 }
 
 export default ButtonRound;

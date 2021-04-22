@@ -5,11 +5,101 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 0 150px;
 
   .line {
     border-color: #e2e2e2;
     padding-top: 40px;
     border-left: none;
     border-right: none;
+  }
+
+  .title {
+    text-align: center;
+    color: #939393;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    margin: 70px 0;
+
+    span {
+      position: relative;
+
+      &::before {
+        height: 1px;
+        width: 60px;
+        background-color: #e2e2e2;
+        content: "";
+        position: absolute;
+        right: 85px;
+        top: 6px;
+        opacity: 0.2;
+      }
+      &::after {
+        height: 1px;
+        width: 60px;
+        background-color: #e2e2e2;
+        content: "";
+        position: absolute;
+        left: 85px;
+        top: 6px;
+        opacity: 0.2;
+      }
+    }
+  }
+  .form {
+    input,
+    textarea {
+      background-color: transparent;
+      border: 1px solid #363636;
+      padding: 12px 20px;
+      margin: 15px 25px 5px 0px;
+      color: white;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    .half {
+      display: flex;
+
+      .form-control {
+        flex: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &.error {
+          border: 2px solid #ee2323;
+        }
+
+        .file-chosen {
+          background-color: transparent;
+          border: 1px solid #363636;
+          padding: 12px 20px;
+          margin: 15px 25px 5px 0px;
+          flex: 1;
+        }
+        .button {
+          height: 40px;
+          margin-top: 5px;
+        }
+      }
+    }
+    .full {
+      .choose-file {
+        width: 100%;
+        resize: none;
+
+        &.error {
+          border: 2px solid #ee2323;
+        }
+      }
+    }
+  }
+  .submit {
+    text-align: center;
+    margin-top: 40px;
   }
 }

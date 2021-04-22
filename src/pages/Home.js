@@ -19,7 +19,6 @@ function Home() {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      console.log(window.pageYOffset);
       if (window.pageYOffset < 60) {
         setColor("black");
       } else {
@@ -44,7 +43,7 @@ function Home() {
         <ContactUs />
       </Content>
 
-      <Footer>
+      <Footer className="">
         <MyFooter />
       </Footer>
     </>

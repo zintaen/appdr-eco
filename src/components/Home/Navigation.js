@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Menu } from "antd";
 
 import "./Navigation.scss";
@@ -8,26 +9,30 @@ import logoBlack from "../../assets/images/logo_dark.png";
 function Navigation({ color }) {
   return (
     <Menu className={`navigation ${color}`}>
-      <img className="logo" src={color === "black" ? logoWhite : logoBlack} />
+      <img
+        alt="logo"
+        className="logo"
+        src={color === "black" ? logoWhite : logoBlack}
+      />
       <div className="link-container">
         <a href="#home" className="link">
           HOME
         </a>
-        <a href="#about" className="link about">
+        <a href="#about" className="link">
           ABOUT
         </a>
-        <a href="#how-it-works" className="link about">
+        <a href="#how-it-works" className="link">
           HOW IT WORKS
         </a>
-        <a href="#price" className="link about">
+        <a href="#price" className="link">
           PRICE
         </a>
-        <a href="#contact-us" className="link about">
+        <a href="#contact-us" className="link">
           CONTACT US
         </a>
-        <a href="#" className="link about">
+        <Link to="/login" className="link">
           LOGIN
-        </a>
+        </Link>
       </div>
     </Menu>
   );

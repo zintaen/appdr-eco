@@ -1,0 +1,43 @@
+.footer-container {
+  margin: 50px 270px;
+  font-family: "Montserrat", sans-serif;
+  color: #b7b7b7;
+
+  .title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 95px;
+    font-weight: 700;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 65px;
+
+    .bold {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: -3px;
+    }
+
+    .logo {
+      background-image: url("../../assets/images/logo.png");
+      height: 50px;
+      width: 130px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  .border {
+    height: 1px;
+    background-color: gray;
+    margin: 45px 0;
+  }
+  .small {
+    font-size: 10px;
+  }
+  .right {
+    text-align: right;
+    color: #939393;
+  }
+}
