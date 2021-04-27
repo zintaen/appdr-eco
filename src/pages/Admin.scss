@@ -172,7 +172,7 @@ $grey: #d7d7d7;
         }
         .service-2 {
           color: $color-white;
-          font-size: 13px;
+          font-size: 12px;
           background-color: #8290a3;
           padding: 7px;
         }
@@ -181,7 +181,7 @@ $grey: #d7d7d7;
 
           .big {
             padding: 6px 0;
-            font-size: 15px;
+            font-size: 13px;
           }
           .yellow {
             background-color: $color-yellow;
@@ -291,7 +291,7 @@ $grey: #d7d7d7;
 
         .left {
           flex: 50%;
-          padding: 5px 20px 20px 20px;
+          padding: 0px 20px 10px 20px;
           background-color: $color-white;
 
           .block {
@@ -344,7 +344,7 @@ $grey: #d7d7d7;
         }
         .right {
           flex: 50%;
-          padding: 5px 20px 20px 20px;
+          padding: 0px 20px 10px 20px;
           background-color: $color-white;
           margin-left: 18px;
 
@@ -430,6 +430,55 @@ $grey: #d7d7d7;
               color: gray;
               width: 71px;
             }
+          }
+        }
+      }
+    }
+    .recent-inquiries {
+      background-color: $color-white;
+      margin: 20px 0;
+      padding: 0 20px;
+
+      .content {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        margin: 10px 0;
+
+        .left {
+          font-weight: 500;
+        }
+        .right {
+          .day {
+            margin-right: 35px;
+          }
+          .person {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    .news {
+      background-color: $color-white;
+      margin: 20px 0;
+      padding: 0 20px;
+
+      .ant-tabs-ink-bar {
+        width: 110px;
+      }
+      .news-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+
+        .left {
+          display: flex;
+          .image {
+            background-image: url("../assets/images/120778724_206729390806353_8026480639048956384_n.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 220px;
+            height: 220px;
           }
         }
       }

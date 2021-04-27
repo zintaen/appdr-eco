@@ -69,7 +69,7 @@ function Admin() {
     {
       background: "blue",
       button: "Issue,3461",
-      content: "Ándroid source ânlýys",
+      content: "Server-Comment feature update",
       day: "2019.09.04",
       time: "32h",
       developer: "green",
@@ -77,7 +77,8 @@ function Admin() {
     {
       background: "green",
       button: "Issue,3461",
-      content: "Ándroid source ânlýys",
+      content:
+        "Server-Kakao Talk sharing function update of detailed page screen map",
       day: "2019.09.04",
       time: "3 p.m.",
       developer: "gray",
@@ -85,7 +86,7 @@ function Admin() {
     {
       background: "blue",
       button: "Issue,3461",
-      content: "Ándroid source ânlýys",
+      content: "Server-Comment feature update",
       day: "2019.09.04",
       time: "32h",
       developer: "green",
@@ -93,7 +94,8 @@ function Admin() {
     {
       background: "green",
       button: "Issue,3461",
-      content: "Ándroid source ânlýys",
+      content:
+        "Server-Kakao Talk sharing function update of detailed page screen map",
       day: "2019.09.04",
       time: "3 p.m.",
       developer: "gray",
@@ -158,13 +160,15 @@ function Admin() {
             <div className="service-3 text-center">
               <Row gutter={12}>
                 <Col span={8}>
-                  <div className="yellow big">Card content</div>
+                  <div className="yellow big">Part-time coupon service</div>
                 </Col>
                 <Col span={8}>
-                  <div className="gray big">Card content</div>
+                  <div className="gray big">
+                    Monthly deferred payment system
+                  </div>
                 </Col>
                 <Col span={8}>
-                  <div className="gray big">Card content</div>
+                  <div className="gray big">Project</div>
                 </Col>
               </Row>
             </div>
@@ -231,55 +235,76 @@ function Admin() {
             </div>
           </div>
           <div className="recent-inquiries">
-            <Card
-              title="Pending approval issue 5 Articles"
-              extra={<a href="#">More</a>}
-            >
-              <div className="content">
-                <div className="left">1</div>
-                <div className="right">
-                  <div className="day">2019.12.12</div>
-                  <div className="person">aaa</div>
+            <Tabs defaultActiveKey="1">
+              <TabPane
+                tab="Recent inquiries / requests"
+                extra={<a href="#">More</a>}
+              >
+                <div className="content">
+                  <div className="left">
+                    We want to modify the app we are using, but we want to get a
+                    quote.
+                  </div>
+                  <div className="right">
+                    <span className="day">2019.12.12</span>
+                    <span className="person">
+                      Checking the person in charge
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <div className="content">
-                <div className="left">1</div>
-                <div className="right">
-                  <div className="day">2019.12.12</div>
-                  <div className="person">aaa</div>
+                <div className="content">
+                  <div className="left">
+                    We want to modify the app we are using, but we want to get a
+                    quote.
+                  </div>
+                  <div className="right">
+                    <span className="day">2019.12.12</span>
+                    <span className="person">
+                      Checking the person in charge
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <div className="content">
-                <div className="left">1</div>
-                <div className="right">
-                  <div className="day">2019.12.12</div>
-                  <div className="person">aaa</div>
+                <div className="content">
+                  <div className="left">
+                    We want to modify the app we are using, but we want to get a
+                    quote.
+                  </div>
+                  <div className="right">
+                    <span className="day">2019.12.12</span>
+                    <span className="person">
+                      Checking the person in charge
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Card>
+              </TabPane>
+            </Tabs>
           </div>
           <div className="news">
-            <Card title="Default size card" extra={<a href="#">More</a>}>
-              <div className="left">
-                <img className="image" src="" alt="news" />
-                <div className="info">
-                  <div className="title">1</div>
-                  <div className="content">2</div>
-                  <div className="view-more">2</div>
-                </div>
-              </div>
-              <div className="right">
-                {newsRight.map((item) => (
-                  <>
-                    <img className="image" src={item.image} alt="news" />
+            <Tabs defaultActiveKey="1">
+              <TabPane tab="App Doctor News" extra={<a href="#">More</a>}>
+                <div className="news-container">
+                  <div className="left">
+                    <div className="image"></div>
                     <div className="info">
-                      <div className="title">{item.title}</div>
-                      <div className="content">{item.content}</div>
+                      <div className="title">1</div>
+                      <div className="content">2</div>
+                      <div className="view-more">2</div>
                     </div>
-                  </>
-                ))}
-              </div>
-            </Card>
+                  </div>
+                  <div className="right">
+                    {newsRight.map((item) => (
+                      <>
+                        <img className="image" src={item.image} alt="news" />
+                        <div className="info">
+                          <div className="title">{item.title}</div>
+                          <div className="content">{item.content}</div>
+                        </div>
+                      </>
+                    ))}
+                  </div>
+                </div>
+              </TabPane>
+            </Tabs>
           </div>
           ...
           <br />
