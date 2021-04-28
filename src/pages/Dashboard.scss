@@ -4,6 +4,11 @@ $font-size-16: 16px;
 
 $grey: #d7d7d7;
 
+.ant-btn {
+  border-color: $color-white !important;
+  font-size: 13px !important;
+}
+
 .ant-tabs-content-holder {
   margin-top: -10px;
 }
@@ -23,94 +28,9 @@ $grey: #d7d7d7;
 }
 
 .layout {
-  .sider {
-    &.ant-layout-sider {
-      background: #323232;
-      overflow: auto;
-      height: 100vh;
-      position: fixed;
-      left: 0;
-    }
-
-    .ant-menu {
-      background: #323232;
-      margin-top: 10px;
-
-      .ant-menu-item-selected {
-        background-color: black !important;
-
-        span {
-          color: $color-yellow !important;
-        }
-      }
-    }
-
-    .yellow {
-      background-color: $color-yellow;
-      height: 70px;
-      position: relative;
-
-      .logo {
-        background-image: url("../assets/images/logo_dark.png");
-        height: 40px;
-        width: 90px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-    }
-    .user {
-      margin: 10px 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .icon {
-        color: $color-white;
-        font-size: 25px;
-        border: 1px solid $color-yellow;
-        background-color: $color-yellow;
-        border-radius: 50%;
-        padding: 0px 7px;
-      }
-      .name {
-        color: $color-white;
-        margin-left: 8px;
-        font-size: $font-size-16;
-        opacity: 0.8;
-      }
-    }
-
-    .html {
-      color: $color-white;
-      font-size: 12px;
-      border: 1px solid $color-white;
-      margin: 0px 13px;
-      padding: 8px;
-      border-radius: 5px;
-      opacity: 0.8;
-    }
-
-    .ant-menu-item-icon {
-      font-size: 17px;
-    }
-    .ant-menu-item:hover {
-      background-color: black;
-      color: $color-yellow;
-    }
-    .title {
-      font-size: 13px;
-    }
-  }
   .site-layout {
     margin-left: 240px;
 
-    .ant-layout-header {
-      background: $color-white;
-      height: 50px;
-    }
     .site-content {
       padding: 50px 0px 0px 15px;
 
@@ -468,17 +388,56 @@ $grey: #d7d7d7;
       }
       .news-container {
         display: flex;
-        justify-content: space-between;
         margin: 10px 0;
 
         .left {
-          display: flex;
-          .image {
-            background-image: url("../assets/images/120778724_206729390806353_8026480639048956384_n.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 220px;
-            height: 220px;
+          flex: 50%;
+
+          .info {
+            display: flex;
+            .image {
+              width: 205px;
+              height: 215px;
+            }
+            .title {
+              font-size: 13px;
+              font-weight: 500;
+              margin-left: 5px;
+            }
+            .content {
+              font-size: 13px;
+              margin-left: 5px;
+              margin-top: 20px;
+            }
+            .button-bottom {
+              text-align: right;
+              margin-top: 35px;
+            }
+          }
+        }
+        .right {
+          flex: 50%;
+
+          .big-right {
+            display: flex;
+            margin-bottom: 20px;
+
+            .image {
+              height: 100px;
+              width: 100px;
+            }
+            .info {
+              .title {
+                font-size: 11px;
+                font-weight: 500;
+                margin-left: 10px;
+              }
+              .content {
+                font-size: 11px;
+                margin-left: 10px;
+                margin-top: 15px;
+              }
+            }
           }
         }
       }
