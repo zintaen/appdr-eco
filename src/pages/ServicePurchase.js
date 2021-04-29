@@ -1,6 +1,16 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-import { Layout, Menu, Progress, Row, Col, Button, Tabs, Card } from "antd";
+import {
+  Layout,
+  Menu,
+  Progress,
+  Row,
+  Col,
+  Input,
+  Button,
+  Tabs,
+  Card,
+} from "antd";
 import {
   RightCircleFilled,
   UserOutlined,
@@ -11,9 +21,8 @@ import {
   MessageOutlined,
 } from "@ant-design/icons";
 
-import leftImages from "../assets/images/120778724_206729390806353_8026480639048956384_n.jpg";
-import rightImagestop from "../assets/images/130996750_236492587830033_2736598305586578396_n.jpg";
-import rightImagesbottom from "../assets/images/135462173_249444929868132_5627830014950120171_n.jpg";
+import productImages from "../assets/images/product.png";
+import couponImages from "../assets/images/coupon.jpg";
 import Mainlayout from "../components/common/Layout";
 
 import "./ServicePurchase.scss";
@@ -23,113 +32,52 @@ const { TabPane } = Tabs;
 function ServicePurchase() {
   const [tab, setTab] = useState({ key: "tab1" });
 
-  const status_1 = [
+  const purchaseBottom = [
     {
-      title: "Proceeding",
-      time: "28 hours",
-      percent: 35,
-      color: "blue",
+      image: productImages,
+      price: "700,000 KRW",
+      input: "1",
+      button: "purchase",
+      content: "KRW 35,000 per hour / 3 months validity / VAT excluded",
+      voucher: "Developer Part Time Coupon",
+      coupon: "20 hour coupon",
     },
     {
-      title: "Complete complete",
-      time: "456 hours",
-      percent: 85,
-      color: "yellow",
+      image: productImages,
+      price: "1,200,000 KRW",
+      input: "1",
+      button: "purchase",
+      content: "KRW 35,000 per hour / 3 months validity / VAT excluded",
+      voucher: "Developer Part Time Coupon",
+      coupon: "40 hour coupon",
     },
     {
-      title: "Remaining time",
-      time: "12 hours",
-      percent: 25,
-      color: "green",
-    },
-  ];
-
-  const issueLeft = [
-    {
-      background: "blue",
-      button: "Issue,3461",
-      content: "Android source analysis",
-      time: "32h",
+      image: productImages,
+      price: "1,500,000 KRW",
+      input: "1",
+      button: "purchase",
+      content: "KRW 35,000 per hour / 3 months validity / VAT excluded",
+      voucher: "Developer Part Time Coupon",
+      coupon: "80 hour coupon",
     },
     {
-      background: "green",
-      button: "Issue,3465",
-      content: "Android-Build connection between prodiction and test server",
-      time: "3 p.m.",
-    },
-    {
-      background: "blue",
-      button: "Issue,3461",
-      content: "Android source analysis",
-      time: "32h",
-    },
-    {
-      background: "green",
-      button: "Issue,3465",
-      content: "Android-Build connection between prodiction and test server",
-      time: "3 p.m.",
+      image: productImages,
+      price: "2,000,000 KRW",
+      input: "1",
+      button: "purchase",
+      content: "KRW 35,000 per hour / 3 months validity / VAT excluded",
+      voucher: "Developer Part Time Coupon",
+      coupon: "120 hour coupon",
     },
   ];
 
-  const issueRight = [
+  const couponRight = [
     {
-      background: "blue",
-      button: "Issue,3461",
-      content: "Server-Comment feature update",
-      day: "2019.09.04",
-      time: "32h",
-      developer: "green",
-    },
-    {
-      background: "green",
-      button: "Issue,3461",
-      content:
-        "Server-Kakao Talk sharing function update of detailed page screen map",
-      day: "2019.09.04",
-      time: "3 p.m.",
-      developer: "gray",
-    },
-    {
-      background: "blue",
-      button: "Issue,3461",
-      content: "Server-Comment feature update",
-      day: "2019.09.04",
-      time: "32h",
-      developer: "green",
-    },
-    {
-      background: "green",
-      button: "Issue,3461",
-      content:
-        "Server-Kakao Talk sharing function update of detailed page screen map",
-      day: "2019.09.04",
-      time: "3 p.m.",
-      developer: "gray",
+      image: couponImages,
     },
   ];
 
-  const newsLeft = [
-    {
-      image: leftImages,
-    },
-  ];
-
-  const newsRight = [
-    {
-      image: rightImagestop,
-      title:
-        "App Doctor Seok-gyun Heo,CEO,Bitna Kim,General Manager [Asan Nanum Foundation/MARU180] Interview News!!",
-      content:
-        "Good morning. This is App Doctor. Today's news is aninterview conducted by the Asan NanumFoundation/MARU180. The protagonists of this interview are Seok-gyun Heo, CEO of App Doctor, and Bitna Kim of App Doctor",
-    },
-    {
-      image: rightImagesbottom,
-      title:
-        "App Doctor Seok-gyun Heo,CEO,Bitna Kim,General Manager [Asan Nanum Foundation/MARU180] Interview News!!",
-      content:
-        "Good morning. This is App Doctor. Today's news is aninterview conducted by the Asan NanumFoundation/MARU180. The protagonists of this interview are Seok-gyun Heo, CEO of App Doctor, and Bitna Kim of App Doctor",
-    },
-  ];
+  const [count, setCount] = useState(0);
 
   return (
     <Mainlayout>
@@ -140,11 +88,11 @@ function ServicePurchase() {
           tabList={[
             {
               key: "tab1",
-              tab: "tab1",
+              tab: "Recommendation",
             },
             {
               key: "tab2",
-              tab: "tab2",
+              tab: "Part-time coupon",
             },
           ]}
           onTabChange={(key) => {
@@ -153,8 +101,78 @@ function ServicePurchase() {
         >
           {
             {
-              tab1: <p>content1</p>,
-              tab2: <p>content2</p>,
+              tab1: <p className="content">This is first tab</p>,
+              tab2: (
+                <div>
+                  <div className="part-time-coupon">
+                    <div className="big-title">
+                      <div className="title">
+                        App Doctor Part Time Coupon Service
+                      </div>
+                      <div className="content-2">
+                        With App Doctor's unique new development service,
+                        purchase time like a coupon and experience a reasonable
+                        service that consumer as much time as needed for
+                        development.
+                      </div>
+                    </div>
+                    {couponRight.map((item) => (
+                      <img
+                        className="image-coupon"
+                        src={item.image}
+                        alt="news"
+                      />
+                    ))}
+                  </div>
+                  <div className="developer-coupon">
+                    {purchaseBottom.map((item) => (
+                      <div className="purchase-left">
+                        <div className="left">
+                          <img
+                            className="items-image"
+                            src={item.image}
+                            alt="news"
+                          />
+                          <div className="wrapper">
+                            <div className="voucher">{item.voucher}</div>
+                            <div className="coupon">{item.coupon}</div>
+                          </div>
+                        </div>
+                        <div className="right">
+                          <div className="middle">
+                            <div className="price">{item.price}</div>
+                            <div className="input">
+                              <button
+                                onClick={() => setCount(count - 1)}
+                                className="count"
+                              >
+                                -
+                              </button>
+                              <Input
+                                type="number"
+                                style={{ width: "20%" }}
+                                defaultValue=""
+                              />
+                              <button
+                                onClick={() => setCount(count + 1)}
+                                className="count"
+                              >
+                                +
+                              </button>
+                            </div>
+                            <div className="button">
+                              <Button className="button-purchase">
+                                <span className="style-name">Purchase</span>
+                              </Button>
+                            </div>
+                          </div>
+                          <div className="content">{item.content}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ),
             }[tab.key]
           }
         </Card>
