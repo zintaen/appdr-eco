@@ -22,7 +22,7 @@ function ViewMore() {
   );
 }
 
-function Dashboard() {
+function Dashboard({ route }) {
   const [tab, setTab] = useState({ key: "tab1" });
 
   const status_1 = [
@@ -134,7 +134,7 @@ function Dashboard() {
   ];
 
   return (
-    <Mainlayout>
+    <Mainlayout route={route}>
       <Content className="site-content">
         <div className="service-progress-status">
           <div className="service-1">

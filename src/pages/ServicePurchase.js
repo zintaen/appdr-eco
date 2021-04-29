@@ -29,7 +29,7 @@ import "./ServicePurchase.scss";
 
 const { TabPane } = Tabs;
 
-function ServicePurchase() {
+function ServicePurchase({ route }) {
   const [tab, setTab] = useState({ key: "tab1" });
 
   const purchaseBottom = [
@@ -77,10 +77,10 @@ function ServicePurchase() {
     },
   ];
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState({});
 
   return (
-    <Mainlayout>
+    <Mainlayout route={route}>
       <div className="service-container">
         <Card
           className="card"
@@ -125,7 +125,7 @@ function ServicePurchase() {
                     ))}
                   </div>
                   <div className="developer-coupon">
-                    {purchaseBottom.map((item) => (
+                    {purchaseBottom.map((item, index) => (
                       <div className="purchase-left">
                         <div className="left">
                           <img
@@ -143,18 +143,35 @@ function ServicePurchase() {
                             <div className="price">{item.price}</div>
                             <div className="input">
                               <button
-                                onClick={() => setCount(count - 1)}
+                                onClick={() =>
+                                  setCount({
+                                    ...count,
+                                    [index]:
+                                      !count[index] || count[index] < 0
+                                        ? 0
+                                        : count[index] - 1,
+                                  })
+                                }
                                 className="count"
                               >
                                 -
                               </button>
                               <Input
                                 type="number"
-                                style={{ width: "20%" }}
-                                defaultValue=""
+                                value={count[index]}
+                                defaultValue="0"
                               />
                               <button
-                                onClick={() => setCount(count + 1)}
+                                onClick={() => {
+                                  setCount({
+                                    ...count,
+                                    [index]: !count[index]
+                                      ? 1
+                                      : count[index] < 0
+                                      ? 0
+                                      : count[index] + 1,
+                                  });
+                                }}
                                 className="count"
                               >
                                 +

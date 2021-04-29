@@ -8,12 +8,13 @@ $grey: #d7d7d7;
   background: $color-white !important;
   height: 50px !important;
   padding: 0px !important;
+  position: relative !important;
 
-  .logo-admin {
-    background-image: url("../../../assets/images/178869519_512314656431847_8367906319180232373_n.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 40px;
-    height: 40px;
+  .avt-image {
+    width: 50px;
+    height: 50px;
+    right: 0;
+    position: absolute;
+    top: 0;
   }
 }

@@ -1,11 +1,13 @@
 $color-yellow: #ffc92d;
 $color-white: #fff;
 
+.ant-card-body {
+  min-height: calc(100vh - 180px);
+}
 .service-container {
   padding: 0 20px;
   .card {
-    margin: 70px 0px !important;
-
+    margin-top: 20px;
     .ant-card-head-title {
       padding-bottom: 20px !important;
     }
@@ -100,6 +102,7 @@ $color-white: #fff;
             .ant-input {
               width: 17% !important;
               padding: 5px 0 !important;
+              text-align: end;
             }
           }
           .button {
